@@ -14,7 +14,7 @@ function App() {
         <div className="content-wrapper">
           <img src={illustration} alt="Mann som sitter betenkt på en stol" className="illustration"></img>
           <div>
-          <div className="inline-color">Registrer deg nå!</div>
+          <div className="inline-color"></div>
           <ModalAnt></ModalAnt>
           </div>
             

@@ -32,18 +32,21 @@ const CollectionCreateForm = ({ visible, onCreate, onCancel }) => {
         }}
       >
         <Form.Item
-          name="email"
-          label="Epost"
-          rules={[
-            {
-              required: true,
-              message: 'Please input the title of collection!',
-            },
-          ]}
+          name="name"
+          label="Navn"
         >
           <Input />
         </Form.Item>
-        <Form.Item name="name" label="Navn">
+        <Form.Item 
+        name="email" 
+        label="Epost"
+        rules={[
+            {
+              required: true,
+              message: 'Du glemte å fylle ut epost!',
+            },
+          ]}
+          >
           <Input type="textarea" />
         </Form.Item>
         <Form.Item name="modifier" className="collection-create-form_last-form-item">
@@ -52,6 +55,7 @@ const CollectionCreateForm = ({ visible, onCreate, onCancel }) => {
             <Radio value="private">Privatperson</Radio>
           </Radio.Group>
         </Form.Item>
+        Ved å registrere ditt navn og epost samtykker du til at vi kan lagre dine opplysninger og kontakte deg i forbindelse med Pustepause.
       </Form>
     </Modal>
   );
