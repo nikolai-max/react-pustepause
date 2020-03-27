@@ -22,8 +22,6 @@ body {
   height: 100vh;
   display: flex;
   align-items: center;
-  color: #7D8EDB;
-  background-color: #F0F5FE;
   overflow: hidden;
   font-size: 1em;
 }

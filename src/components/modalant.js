@@ -6,10 +6,10 @@ const CollectionCreateForm = ({ visible, onCreate, onCancel }) => {
   return (
     <Modal
       visible={visible}
-      title="Create a new collection"
-      okText="Create"
+      title="Registrer navn og epost"
+      okText="Registrer"
       centered
-      cancelText="Cancel"
+      cancelText="Avbryt"
       onCancel={onCancel}
       onOk={() => {
         form
@@ -32,8 +32,8 @@ const CollectionCreateForm = ({ visible, onCreate, onCancel }) => {
         }}
       >
         <Form.Item
-          name="title"
-          label="Title"
+          name="email"
+          label="Epost"
           rules={[
             {
               required: true,
@@ -43,13 +43,13 @@ const CollectionCreateForm = ({ visible, onCreate, onCancel }) => {
         >
           <Input />
         </Form.Item>
-        <Form.Item name="description" label="Description">
+        <Form.Item name="name" label="Navn">
           <Input type="textarea" />
         </Form.Item>
         <Form.Item name="modifier" className="collection-create-form_last-form-item">
           <Radio.Group>
-            <Radio value="public">Public</Radio>
-            <Radio value="private">Private</Radio>
+            <Radio value="public">Helsearbeider</Radio>
+            <Radio value="private">Privatperson</Radio>
           </Radio.Group>
         </Form.Item>
       </Form>
@@ -71,7 +71,7 @@ const ModalAnt = () => {
           setVisible(true);
         }}
       >
-        Regisrer deg
+        Registrer deg
         </button>
       <CollectionCreateForm
         visible={visible}
