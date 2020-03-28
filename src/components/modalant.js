@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Button, Modal, Form, Input, Radio } from 'antd';
+import { Modal, Form, Input, Radio } from 'antd';
+import axios from 'axios';
 
 const CollectionCreateForm = ({ visible, onCreate, onCancel }) => {
   const [form] = Form.useForm();
@@ -67,6 +68,19 @@ const ModalAnt = () => {
   const onCreate = values => {
     console.log('Received values of form: ', values);
     setVisible(false);
+
+    axios
+      .post("https://submit-form.com/J9lGUS2-jwdnEHGhwlRd1", {
+        name: values.name,
+        email: values.email,
+        modifier: values.modifier
+      })
+      .then(function(response) {
+        console.log(response);
+      })
+      .catch(function(response) {
+        console.error(response);
+    });
   };
 
   return (
