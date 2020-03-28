@@ -31,18 +31,34 @@ body {
   align-items: flex-end;
 }
 
-.explainer-wrapper {
+.explainer-wrapper-desktop {
+  width: 17%;
+  margin: 0px 0px 1em 15.5em;
+}
+
+.explainer-wrapper-tablet {
+  width: 23%;
+  margin: 0 0 1.5em 5.5em;
+}
+
+.explainer-wrapper-mobile {
   width: 40%;
   margin: 0 0 1.5em 1.5em;
 }
 
 .content-wrapper {
   display: flex;
-  justify-content: space-center;
+  justify-content: center;
   align-items: center;
 }
 
-.illustration {
+.illustration-desktop {
+  width: 40%;
+}
+.illustration-tablet {
+  width: 50%;
+}
+.illustration-mobile {
   width: 60%;
 }
 
@@ -54,8 +70,19 @@ body {
   text-align: center;
 }
 
-.footer-wrapper {
+.footer-wrapper-desktop {
+  width: 50%;
+  text-align: left;
+}
+
+.footer-wrapper-tablet {
   width: 60%;
+  text-align: left;
+}
+
+.footer-wrapper-mobile {
+  width: 80%;
+  text-align: left;
 }
 
 .button-custom {
