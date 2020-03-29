@@ -70,16 +70,16 @@ const ModalAnt = () => {
     setVisible(false);
 
     axios
-      .post("https://submit-form.com/J9lGUS2-jwdnEHGhwlRd1", {
-        name: values.name,
-        email: values.email,
-        modifier: values.modifier
-      })
-      .then(function(response) {
-        console.log(response);
-      })
-      .catch(function(response) {
-        console.error(response);
+        .post("https://submit-form.com/J9lGUS2-jwdnEHGhwlRd1", {
+          name: values.name,
+          email: values.email,
+          modifier: values.modifier
+        })
+        .then(function(response) {
+          console.log(response);
+        })
+        .catch(function(response) {
+          console.error(response);
     });
   };
 
