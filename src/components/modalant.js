@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Modal, Form, Input, Radio } from 'antd';
+import { Modal, Form, Input, Radio, Alert } from 'antd';
 import axios from 'axios';
 
-const CollectionCreateForm = ({ visible, onCreate, onCancel }) => {
+const CollectionCreateForm = ({ visible, onCreate, onCancel, customAlert }) => {
   const [form] = Form.useForm();
   return (
     <Modal
@@ -27,6 +27,12 @@ const CollectionCreateForm = ({ visible, onCreate, onCancel }) => {
       <Form
         form={form}
         layout="vertical"
+        onFinish={<Alert
+          message="Success Tips"
+          description="Detailed description and advice about successful copywriting."
+          type="success"
+          showIcon
+        />}
         name="form_in_modal"
         initialValues={{
           modifier: 'public',
