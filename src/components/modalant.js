@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Modal, Form, Input, Radio, Alert } from 'antd';
+import { Modal, Form, Input, Radio, notification } from 'antd';
 import axios from 'axios';
 
-const CollectionCreateForm = ({ visible, onCreate, onCancel, customAlert }) => {
+const CollectionCreateForm = ({ visible, onCreate, onCancel }) => {
   const [form] = Form.useForm();
   return (
     <Modal
@@ -27,12 +27,6 @@ const CollectionCreateForm = ({ visible, onCreate, onCancel, customAlert }) => {
       <Form
         form={form}
         layout="vertical"
-        onFinish={<Alert
-          message="Success Tips"
-          description="Detailed description and advice about successful copywriting."
-          type="success"
-          showIcon
-        />}
         name="form_in_modal"
         initialValues={{
           modifier: 'public',
@@ -68,10 +62,19 @@ const CollectionCreateForm = ({ visible, onCreate, onCancel, customAlert }) => {
   );
 };
 
+const openNotificationWithIcon = type => {
+  notification[type]({
+    message: 'Gratulerer!',
+    description:
+      'Du er nå regisrert på ventelisten til Pustepause! Appen er ute i beta versjon nå, og du vil bli oppdatert løpende når du har mulighet til å kjøpe appen.',
+      placement: 'topLeft',
+  });
+};
+
 const ModalAnt = () => {
   const [visible, setVisible] = useState(false);
 
-  const onCreate = values => {
+  const onCreate = (values) => {
     console.log('Received values of form: ', values);
     setVisible(false);
 
@@ -87,16 +90,16 @@ const ModalAnt = () => {
         .catch(function(response) {
           console.error(response);
     });
+    openNotificationWithIcon('success')
   };
 
   return (
     <div>
-        <button className="button-custom" onClick={() => {
-          setVisible(true);
-        }}
-      >
-        Registrer deg
-        </button>
+      <button className="button-custom" onClick={() => {
+        setVisible(true);
+      }}>
+      Registrer deg
+      </button>
       <CollectionCreateForm
         visible={visible}
         onCreate={onCreate}

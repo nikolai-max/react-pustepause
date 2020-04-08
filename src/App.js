@@ -37,7 +37,6 @@ function App() {
         <Mobile><img src={illustration} alt="Mann som sitter betenkt på en stol" className="illustration-mobile"></img></Mobile>
           
           <div>
-          <div className="inline-color"></div>
           <ModalAnt></ModalAnt>
           </div>
             
