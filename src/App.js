@@ -44,15 +44,15 @@ function App() {
         <div className="footer">
 
           <Desktop>
-            <div className="footer-wrapper-desktop">Endelig en meditasjonsapp på norsk. Regelmessig mindfullnessbasert stressreduksjon reduserer symptomer på angst og uro. <br></br> Appen er utviklet av helsepersonell.
+            <div className="footer-wrapper-desktop">Endelig en meditasjonsapp på norsk. Regelmessig mindfullness reduserer symptomer på angst og uro. <br></br> Appen er utviklet av helsepersonell.
             </div>
           </Desktop>
           <Tablet>
-            <div className="footer-wrapper-tablet">Endelig en meditasjonsapp på norsk. Regelmessig mindfullnessbasert stressreduksjon reduserer symptomer på angst og uro. <br></br> Appen er utviklet av helsepersonell.
+            <div className="footer-wrapper-tablet">Endelig en meditasjonsapp på norsk. Regelmessig mindfullness reduserer symptomer på angst og uro. <br></br> Appen er utviklet av helsepersonell.
             </div>
           </Tablet>
           <Mobile>
-            <div className="footer-wrapper-mobile">Endelig en meditasjonsapp på norsk. Regelmessig mindfullnessbasert stressreduksjon reduserer symptomer på angst og uro.<br></br> Appen er utviklet av helsepersonell.
+            <div className="footer-wrapper-mobile">Endelig en meditasjonsapp på norsk. Regelmessig mindfullness reduserer symptomer på angst og uro. <br></br> Appen er utviklet av helsepersonell.
             </div> 
           </Mobile>
         </div> 
