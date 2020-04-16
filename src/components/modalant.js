@@ -66,8 +66,9 @@ const openNotificationWithIcon = type => {
   notification[type]({
     message: 'Gratulerer!',
     description:
-      'Du er nå regisrert på listen til Pustepause! Appen er ute i beta versjon for testing, og du vil bli oppdatert løpende når du har mulighet til å kjøpe appen.',
+      'Du er nå regisrert på ventelisten til Pustepause! Du vil bli oppdatert løpende når du har mulighet til å kjøpe appen.',
       placement: 'topLeft',
+      duration: 16,
   });
 };
 
@@ -95,7 +96,7 @@ const ModalAnt = () => {
 
   return (
     <div>
-      <button className="button-custom" onClick={() => {
+      <button className="app-main__cta" onClick={() => {
         setVisible(true);
       }}>
       Registrer deg

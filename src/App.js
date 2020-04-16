@@ -1,5 +1,4 @@
 import React from 'react';
-import illustration from './images/illustration.png';
 import './App.css';
 import ModalAnt from './components/modalant'
 import { useMediaQuery } from 'react-responsive'
@@ -20,42 +19,39 @@ function App() {
   }
 
   return (
-    <div className="container">
+    <div className="app">
       <div>
-        <div className="explainer">
-          <Desktop><div className="explainer-wrapper-desktop">En <span className="inline-color">Pustepause</span> er å finne roen inni seg selv og la <span className="inline-color">hodet</span> og <span className="inline-color">tankene</span> kunne <span className="inline-color">hvile...</span>
+        <div className="app-header">
+          <Desktop><div className="header-wrapper-desktop">En <span className="inline-color">Pustepause</span> er å finne roen inni seg selv og la <span className="inline-color">hodet</span> og <span className="inline-color">tankene</span> kunne <span className="inline-color">hvile...</span>
           </div></Desktop>
-          <Tablet><div className="explainer-wrapper-tablet">En <span className="inline-color">Pustepause</span> er å finne roen inni seg selv og la <span className="inline-color">hodet</span> og <span className="inline-color">tankene</span> kunne <span className="inline-color">hvile...</span>
+          <Tablet><div className="header-wrapper-tablet">En <span className="inline-color">Pustepause</span> er å finne roen inni seg selv og la <span className="inline-color">hodet</span> og <span className="inline-color">tankene</span> kunne <span className="inline-color">hvile...</span>
           </div></Tablet>
-          <Mobile><div className="explainer-wrapper-mobile">En <span className="inline-color">Pustepause</span> er å finne roen inni seg selv og la <span className="inline-color">hodet</span> og <span className="inline-color">tankene</span> kunne <span className="inline-color">hvile...</span>
+          <Mobile><div className="header-wrapper-mobile">En <span className="inline-color">Pustepause</span> er å finne roen inni seg selv og la <span className="inline-color">hodet</span> og <span className="inline-color">tankene</span> kunne <span className="inline-color">hvile...</span>
           </div></Mobile>
         </div>
-        <div className="content-wrapper">
-
-        <Desktop><img src={illustration} alt="Mann som sitter betenkt på en stol" className="illustration-desktop"></img></Desktop>
-        <Tablet><img src={illustration} alt="Mann som sitter betenkt på en stol" className="illustration-tablet"></img></Tablet>
-        <Mobile><img src={illustration} alt="Mann som sitter betenkt på en stol" className="illustration-mobile"></img></Mobile>
-          
+        <div className="app-main">
+          <Mobile><img src="illustration.png" alt="Mann som sitter betenkt på en stol" className="app-main-mobile__image"></img></Mobile>
+          <Tablet><img src="illustration.png" alt="Mann som sitter betenkt på en stol" className="app-main-tablet__image"></img></Tablet>
+          <Desktop><img src="illustration.png" alt="Mann som sitter betenkt på en stol" className="app-main-desktop__image"></img></Desktop>         
           <div>
           <ModalAnt></ModalAnt>
-          </div>
-            
+          </div>   
         </div>
-        <div className="footer">
+        <footer className="app-footer">
 
           <Desktop>
-            <div className="footer-wrapper-desktop">Endelig en meditasjonsapp på norsk. Regelmessig mindfullness reduserer symptomer på angst og uro. <br></br> Appen er utviklet av helsepersonell.
+            <div className="app-footer-desktop">Endelig en meditasjonsapp på norsk. Regelmessig mindfullness reduserer symptomer på angst og uro. <br></br> Appen er utviklet av helsepersonell.
             </div>
           </Desktop>
           <Tablet>
-            <div className="footer-wrapper-tablet">Endelig en meditasjonsapp på norsk. Regelmessig mindfullness reduserer symptomer på angst og uro. <br></br> Appen er utviklet av helsepersonell.
+            <div className="app-footer-tablet">Endelig en meditasjonsapp på norsk. Regelmessig mindfullness reduserer symptomer på angst og uro. <br></br> Appen er utviklet av helsepersonell.
             </div>
           </Tablet>
           <Mobile>
-            <div className="footer-wrapper-mobile">Endelig en meditasjonsapp på norsk. Regelmessig mindfullness reduserer symptomer på angst og uro. <br></br> Appen er utviklet av helsepersonell.
+            <div className="app-footer-mobile">Endelig en meditasjonsapp på norsk. Regelmessig mindfullness reduserer symptomer på angst og uro. <br></br> Appen er utviklet av helsepersonell.
             </div> 
           </Mobile>
-        </div> 
+        </footer> 
       </div>
     </div>
   );
